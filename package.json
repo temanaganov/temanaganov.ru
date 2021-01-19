@@ -1,0 +1,33 @@
+{
+	"name": "temanaganov.ru",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "browser-sync start -s 'src' --cwd 'src' -f '**/*' --no-notify --no-ui",
+		"html": "html-minifier --remove-comments --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
+		"styles": "postcss src/styles/main.css --no-map --output dist/styles/main.css && postcss src/styles/article.css --no-map --output dist/styles/article.css",
+		"build": "rm -rf dist && mkdir dist && cp -r src/public/ dist/public && npm run html && npm run styles"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/temanaganov/temanaganov.ru.git"
+	},
+	"keywords": [],
+	"author": "Artem Naganov <artemnaganov10@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/temanaganov/temanaganov.ru/issues"
+	},
+	"homepage": "https://github.com/temanaganov/temanaganov.ru#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.2.3",
+		"browser-sync": "^2.26.13",
+		"html-minifier": "^4.0.0",
+		"postcss": "^8.2.4",
+		"postcss-cli": "^8.3.1",
+		"postcss-csso": "^5.0.0",
+		"postcss-flexbugs-fixes": "^5.0.2",
+		"postcss-import": "^14.0.0"
+	}
+}

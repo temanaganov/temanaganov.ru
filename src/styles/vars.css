@@ -1,0 +1,10 @@
+:root {
+	--main-font: Merriweather;
+	--code-font: 'IBM Plex Mono';
+	--background-color: #ffffff;
+	--code-background: #eeeeee;
+	--code-border: #dddddd;
+	--text-color: #000000;
+	--accent-color: #540096;
+	--visited-color: #8E8E8E;
+}

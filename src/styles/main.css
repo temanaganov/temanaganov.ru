@@ -1,0 +1,33 @@
+@import './imports.css';
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	font-size: 48px;
+	transform: translateY(-100%);
+	text-align: center;
+}
+
+a {
+	border-bottom: 1px solid;
+}
+
+a:visited {
+	color: var(--visited-color);
+}
+
+a:hover {
+	color: var(--accent-color);
+}
+
+a:focus {
+	color: var(--accent-color);
+	border-radius: 5px;
+	border-bottom: 0;
+	box-shadow: 0 0 0 2px var(--background-color), 0 0 0 4px var(--accent-color);
+}
