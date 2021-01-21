@@ -5,6 +5,9 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	line-height: 1.5;
 }
 
 h1 {
@@ -26,8 +29,8 @@ a:hover {
 }
 
 a:focus {
+	padding: 2px;
 	color: var(--accent-color);
 	border-radius: 5px;
-	border-bottom: 0;
-	box-shadow: 0 0 0 2px var(--background-color), 0 0 0 4px var(--accent-color);
+	border: 2px solid;
 }
