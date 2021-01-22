@@ -1,4 +1,4 @@
-@import './imports.css';
+@import 'imports';
 
 body {
 	background-color: var(--background-color);
@@ -10,22 +10,14 @@ body {
 	width: 100%;
 	max-width: 940px;
 	margin: 0 auto 60px;
-}
 
-@media screen and (max-width: 1024px) {
-	.container {
+	@media screen and (max-width: 1024px) {
 		max-width: 700px;
 	}
-}
-
-@media screen and (max-width: 768px) {
-	.container {
+	@media screen and (max-width: 768px) {
 		max-width: 640px;
 	}
-}
-
-@media screen and (max-width: 680px) {
-	.container {
+	@media screen and (max-width: 680px) {
 		padding: 0 20px;
 	}
 }
@@ -34,50 +26,43 @@ h1 {
 	font-size: 48px;
 	margin: 120px auto 0;
 	text-align: center;
+	@media screen and (max-width: 680px) {
+		font-size: 42px;
+		margin-top: 100px;
+	}
 }
 
 h2 {
 	font-size: 42px;
 	margin-top: 100px;
+	@media screen and (max-width: 680px) {
+		font-size: 36px;
+		margin-top: 80px;
+	}
 }
 
 h3 {
 	font-size: 36px;
 	margin-top: 80px;
+	@media screen and (max-width: 680px) {
+		font-size: 30px;
+		margin-top: 60px;
+	}
 }
 
 h4 {
 	font-size: 30px;
 	margin-top: 60px;
+	@media screen and (max-width: 680px) {
+		font-size: 24px;
+		margin-top: 40px;
+	}
 }
 
 h5 {
 	font-size: 24px;
 	margin-top: 40px;
-}
-
-@media screen and (max-width: 680px) {
-	h1 {
-		font-size: 42px;
-		margin-top: 100px;
-	}
-
-	h2 {
-		font-size: 36px;
-		margin-top: 80px;
-	}
-
-	h3 {
-		font-size: 30px;
-		margin-top: 60px;
-	}
-
-	h4 {
-		font-size: 24px;
-		margin-top: 40px;
-	}
-
-	h5 {
+	@media screen and (max-width: 680px) {
 		font-size: 20px;
 		margin-top: 30px;
 	}
@@ -86,10 +71,7 @@ h5 {
 p {
 	margin-top: 20px;
 	font-size: 20px;
-}
-
-@media screen and (max-width: 680px) {
-	p {
+	@media screen and (max-width: 680px) {
 		font-size: 18px;
 	}
 }
@@ -98,6 +80,9 @@ ul,
 ol {
 	padding-left: 1em;
 	font-size: 20px;
+	li {
+		margin-top: 20px;
+	}
 }
 
 ul {
@@ -108,28 +93,20 @@ ol {
 	list-style: decimal;
 }
 
-ul li,
-ol li {
-	margin-top: 20px;
-}
-
 a {
 	border-bottom: 1px solid;
-}
-
-a:visited {
-	color: var(--visited-color);
-}
-
-a:hover {
-	color: var(--accent-color);
-}
-
-a:focus {
-	padding: 2px;
-	color: var(--accent-color);
-	border-radius: 5px;
-	border: 2px solid;
+	&:visited {
+		color: var(--visited-color);
+	}
+	&:hover {
+		color: var(--accent-color);
+	}
+	&:focus {
+		padding: 2px;
+		color: var(--accent-color);
+		border-radius: 5px;
+		border: 2px solid;
+	}
 }
 
 code {

@@ -4,10 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "browser-sync start -s 'src' --cwd 'src' -f '**/*' --no-notify --no-ui",
-		"html": "html-minifier --remove-comments --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
-		"styles": "postcss src/styles/main.css --no-map --output dist/styles/main.css && postcss src/styles/article.css --no-map --output dist/styles/article.css",
-		"build": "rm -rf dist && mkdir dist && cp -r src/public/ dist/public && npm run html && npm run styles"
+		"start": "gulp",
+		"build": "gulp build"
 	},
 	"repository": {
 		"type": "git",
@@ -21,11 +19,21 @@
 	},
 	"homepage": "https://github.com/temanaganov/temanaganov.ru#readme",
 	"devDependencies": {
+		"@babel/core": "^7.12.10",
+		"@babel/preset-env": "^7.12.11",
 		"autoprefixer": "^10.2.3",
 		"browser-sync": "^2.26.13",
-		"html-minifier": "^4.0.0",
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-postcss": "^9.0.0",
+		"gulp-pug": "^4.0.1",
+		"gulp-sass": "^4.1.0",
+		"gulp-uglify-es": "^2.0.0",
+		"node-sass": "^5.0.0",
 		"postcss": "^8.2.4",
-		"postcss-cli": "^8.3.1",
 		"postcss-csso": "^5.0.0",
 		"postcss-flexbugs-fixes": "^5.0.2",
 		"postcss-import": "^14.0.0"

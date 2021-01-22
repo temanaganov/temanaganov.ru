@@ -5,8 +5,8 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: swap;
-	src: url('../public/fonts/IBMPlexMono.woff2') format('woff2'),
-		url('../public/fonts/IBMPlexMono.woff') format('woff');
+	src: url('../fonts/IBMPlexMono.woff2') format('woff2'),
+		url('../fonts/IBMPlexMono.woff') format('woff');
 }
 
 @font-face {
@@ -14,8 +14,8 @@
 	font-style: italic;
 	font-weight: normal;
 	font-display: swap;
-	src: url('../public/fonts/IBMPlexMonoItalic.woff2') format('woff2'),
-		url('../public/fonts/IBMPlexMonoItalic.woff') format('woff');
+	src: url('../fonts/IBMPlexMonoItalic.woff2') format('woff2'),
+		url('../fonts/IBMPlexMonoItalic.woff') format('woff');
 }
 
 @font-face {
@@ -23,8 +23,8 @@
 	font-style: normal;
 	font-weight: bold;
 	font-display: swap;
-	src: url('../public/fonts/IBMPlexMonoBold.woff2') format('woff2'),
-		url('../public/fonts/IBMPlexMonoBold.woff') format('woff');
+	src: url('../fonts/IBMPlexMonoBold.woff2') format('woff2'),
+		url('../fonts/IBMPlexMonoBold.woff') format('woff');
 }
 
 @font-face {
@@ -32,8 +32,8 @@
 	font-style: italic;
 	font-weight: bold;
 	font-display: swap;
-	src: url('../public/fonts/IBMPlexMonoBoldItalic.woff2') format('woff2'),
-		url('../public/fonts/IBMPlexMonoBoldItalic.woff') format('woff');
+	src: url('../fonts/IBMPlexMonoBoldItalic.woff2') format('woff2'),
+		url('../fonts/IBMPlexMonoBoldItalic.woff') format('woff');
 }
 
 body {
