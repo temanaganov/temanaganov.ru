@@ -20,7 +20,7 @@ function browsersync() {
 
 function html() {
 	return src('src/pug/pages/**/*.pug')
-		.pipe(pug({ pretty: true }))
+		.pipe(pug())
 		.pipe(
 			htmlmin({
 				collapseWhitespace: true,
@@ -47,8 +47,12 @@ function scripts() {
 		.pipe(browserSync.stream());
 }
 
+function images() {
+	return src('src/images/**/*').pipe(dest('dist/images'));
+}
+
 function fonts() {
-	return src('src/public/fonts/*').pipe(dest('dist/public/fonts'));
+	return src('src/fonts/*').pipe(dest('dist/fonts'));
 }
 
 function clean() {
@@ -59,14 +63,17 @@ function startwatch() {
 	watch('src/pug/**/*.pug').on('change', series(html, browserSync.reload));
 	watch('src/styles/**/*.scss').on('change', styles);
 	watch('src/js/**/*.js').on('change', scripts);
+	watch('src/images/**/*').on('change', images);
+	watch('src/fonts/*').on('change', fonts);
 }
 
 exports.browsersync = browsersync;
-exports.watch = watch;
+exports.startwatch = startwatch;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.html = html;
 exports.fonts = fonts;
 exports.clean = clean;
 
-exports.default = series(clean, parallel(html, styles, scripts, fonts), parallel(browsersync, startwatch));
+exports.build = series(clean, parallel(html, styles, scripts, images, fonts));
+exports.default = series(clean, parallel(html, styles, scripts, images, fonts), parallel(browsersync, startwatch));
