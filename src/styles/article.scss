@@ -8,7 +8,7 @@ body {
 
 .container {
 	width: 100%;
-	max-width: 940px;
+	max-width: 840px;
 	margin: 0 auto 60px;
 
 	@media screen and (max-width: 1024px) {
@@ -24,52 +24,51 @@ body {
 
 h1 {
 	font-size: 48px;
-	margin: 120px auto 0;
+	margin: 100px auto 0;
 	text-align: center;
-	@media screen and (max-width: 680px) {
-		font-size: 42px;
-		margin-top: 100px;
-	}
-}
-
-h2 {
-	font-size: 42px;
-	margin-top: 100px;
-	@media screen and (max-width: 680px) {
-		font-size: 36px;
+	@media screen and (max-width: 768px) {
 		margin-top: 80px;
 	}
-}
-
-h3 {
-	font-size: 36px;
-	margin-top: 80px;
 	@media screen and (max-width: 680px) {
-		font-size: 30px;
+		font-size: 42px;
 		margin-top: 60px;
 	}
 }
 
+h2, h3, h4, h5 {
+	margin-top: 1em;
+}
+
+h2 {
+	font-size: 38px;
+	@media screen and (max-width: 680px) {
+		font-size: 34px;
+	}
+}
+
+h3 {
+	font-size: 32px;
+	@media screen and (max-width: 680px) {
+		font-size: 28px;
+	}
+}
+
 h4 {
-	font-size: 30px;
-	margin-top: 60px;
+	font-size: 28px;
 	@media screen and (max-width: 680px) {
 		font-size: 24px;
-		margin-top: 40px;
 	}
 }
 
 h5 {
 	font-size: 24px;
-	margin-top: 40px;
 	@media screen and (max-width: 680px) {
 		font-size: 20px;
-		margin-top: 30px;
 	}
 }
 
 p {
-	margin-top: 20px;
+	margin-top: 10px;
 	font-size: 20px;
 	@media screen and (max-width: 680px) {
 		font-size: 18px;
@@ -78,10 +77,10 @@ p {
 
 ul,
 ol {
-	padding-left: 1em;
+	padding-left: 1.5em;
 	font-size: 20px;
 	li {
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 }
 
@@ -95,17 +94,17 @@ ol {
 
 a {
 	border-bottom: 1px solid;
+	color: var(--accent-color);
 	&:visited {
 		color: var(--visited-color);
 	}
 	&:hover {
-		color: var(--accent-color);
+		opacity: 60%;
 	}
 	&:focus {
-		padding: 2px;
-		color: var(--accent-color);
-		border-radius: 5px;
-		border: 2px solid;
+		border: none;
+		outline: 2px solid var(--accent-color);
+		outline-offset: 2px;
 	}
 }
 
@@ -116,5 +115,23 @@ code {
 	border: 1px solid var(--code-border);
 	font-family: var(--code-font), 'Courier New', Courier, monospace;
 	font-size: 0.8em;
+	line-height: 1.5;
 	white-space: nowrap;
+}
+
+pre {
+	margin: 10px 0 0;
+	padding: 15px 20px;
+	border-radius: 5px;
+	background-color: var(--code-background);
+	border: 1px solid var(--code-border);
+	overflow-x: auto;
+	code {
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		background-color: unset;
+		font-size: 1em;
+		line-height: 2em;
+	}
 }

@@ -18,16 +18,16 @@ h1 {
 
 a {
 	border-bottom: 1px solid;
+	color: var(--accent-color);
 	&:visited {
 		color: var(--visited-color);
 	}
 	&:hover {
-		color: var(--accent-color);
+		opacity: 60%;
 	}
 	&:focus {
-		padding: 2px;
-		color: var(--accent-color);
-		border-radius: 5px;
-		border: 2px solid;
+		border: none;
+		outline: 2px solid var(--accent-color);
+		outline-offset: 2px;
 	}
 }
