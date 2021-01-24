@@ -17,16 +17,18 @@ h1 {
 }
 
 a {
-	border-bottom: 1px solid;
+	border-bottom: 1px solid transparent;
 	color: var(--accent-color);
 	&:visited {
 		color: var(--visited-color);
 	}
-	&:hover {
-		opacity: 70%;
+	&:not([href]) {
+		color: var(--disabled-color);
+	}
+	&:hover[href] {
+		border-color: currentColor;
 	}
 	&:focus {
-		border: none;
 		outline: 2px solid var(--accent-color);
 		outline-offset: 2px;
 	}
