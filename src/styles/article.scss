@@ -96,7 +96,6 @@ ol {
 }
 
 a {
-	border-bottom: 1px solid transparent;
 	color: var(--accent-color);
 	&:visited {
 		color: var(--visited-color);
@@ -105,7 +104,7 @@ a {
 		color: var(--disabled-color);
 	}
 	&:hover[href] {
-		border-color: currentColor;
+		text-decoration: underline;
 	}
 	&:focus {
 		outline: 2px solid var(--accent-color);
